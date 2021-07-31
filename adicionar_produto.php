@@ -45,10 +45,20 @@
         <div class="form-group">
             <label>Categoria</label>
             <select class="form-control form-select" name="categoria" required>
-                <option>Perifericos</option>
-                <option>Hardware</option>
-                <option>Software</option>
-                <option>Celulares</option>
+                
+                <?php
+
+                include 'conexao.php';
+                $sql = "SELECT * FROM categoria order by nome_categoria ASC"; // ASC - faz as categorias aparecerem em ordem alfabetica 
+                $buscar = mysqli_query($conexao,$sql);
+                
+                while($array = mysqli_fetch_array($buscar)){
+                    echo $id_categoria = $array['id_categoria'];
+                    echo $nome_categoria = $array['nome_categoria'];
+                ?>
+                                
+                <option><?php echo $nome_categoria ?></option>
+                    <?php } ?>
             </select>
         </div>
 
