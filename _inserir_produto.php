@@ -25,7 +25,7 @@
 <div class="container" style="width: 300px">
   <h4>Produto adicionado com sucesso!</h4>
   <div style="padding-top: 20px">
-    <a href="index.php" role="button" class="btn btn-sm btn-primary">Cadastrar novo item</a>
+    <a href="adicionar_produto.php" role="button" class="btn btn-sm btn-primary">Cadastrar novo item</a>
   </div>
   
 </div>
