@@ -49,12 +49,12 @@
                 <?php
 
                 include 'conexao.php';
-                $sql = "SELECT * FROM categoria order by nome_categoria ASC"; // ASC - faz as categorias aparecerem em ordem alfabetica 
+                $sql = "SELECT * FROM categoria order by categoria ASC"; // ASC - faz as categorias aparecerem em ordem alfabetica 
                 $buscar = mysqli_query($conexao,$sql);
                 
                 while($array = mysqli_fetch_array($buscar)){
                     echo $id_categoria = $array['id_categoria'];
-                    echo $nome_categoria = $array['nome_categoria'];
+                    echo $nome_categoria = $array['categoria'];
                 ?>
                                 
                 <option><?php echo $nome_categoria ?></option>
